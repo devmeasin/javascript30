@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* start drums part */
+div#drums {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/walpaper.jpg");
+  background-size: cover;
+}
+
+/* Button Design */
+.key {
+  width: 85px;
+  height: 75px;
+  border: 3px solid #333030eb;
+  text-shadow: 0 0 0.5rem #333030eb;
+  margin: 0px 10px 0px;
+  text-align: center;
+  border-radius: 10px;
+  background: #333030eb;
+  color: ghostwhite;
+  transition: all 0.07s ease;
+}
+
+.key kbd {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 45px;
+}
+
+.key .sound {
+  display: block;
+  line-height: 14px;
+  font-family: cursive;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ff0000;
+  box-shadow: 0 0 2rem #ff0000;
+}
+
+/* Design For Mobile  */
+
+@media only screen and (max-width: 600px) {
+  /* start drums part */
+  div#drums {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  /* Button Design */
+  .key {
+    width: 60px;
+    height: 80px;
+    border: 2px solid #000;
+    text-align: center;
+    transform: rotate(90deg);
+    background: #333030eb;
+    color: ghostwhite;
+  }
+
+  .key kbd {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 35px;
+  }
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+}
+
+/* Design For Mobile  */
