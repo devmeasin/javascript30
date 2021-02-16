@@ -4,7 +4,7 @@ function playmusic(event) {
   music.currentTime = 0;
   music.play();
   key.classList.add("playing");
-  console.log(key);
+  // console.log(key);
 }
 
 function removeClass(event) {
@@ -19,3 +19,14 @@ keys.forEach((key) => {
 });
 
 window.addEventListener("keydown", playmusic);
+
+/* function playaudio(event) {
+  console.log(event);
+  const music = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+  const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+  music.currentTime = 0;
+  music.play();
+  key.classList.add("playing");
+}
+
+window.addEventListener("click", playaudio); */

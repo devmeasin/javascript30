@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/clockbg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 10px solid rgba(255, 0, 55, 0.932);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.clock-wrapper:after {
+  background: rgba(24, 23, 23, 0.993);
+  width: 15px;
+  height: 15px;
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 46%;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second {
+  background: red;
+  width: 45%;
+  left: 5%;
+}
+.minute {
+  width: 40%;
+  left: 10%;
+}
+.hours {
+  width: 25%;
+  top: 50%;
+  left: 25%;
+}
